@@ -1,0 +1,46 @@
+Bootstrap: library
+From: centos:8
+
+%post
+yum install -y \
+  make \
+  libX11-devel.x86_64 \
+  libXpm-devel.x86_64 \
+  libXft-devel.x86_64 \
+  libXext-devel.x86_64 \
+  libXmu-devel.x86_64 \
+  libxml2-devel.x86_64 \
+  binutils \
+  qt5-qtbase-devel.x86_64 \
+  git \
+  cmake \
+  wget \
+  mesa-libGLU-devel.x86_64 \
+  python3-devel \
+  which nano \
+  tar
+mkdir /software
+
+
+%environment
+export USE_RTK=ON
+
+# GATE_ROOT_DIR contains all the 
+# - sources (src), 
+# - compilation artifacts (bin) and 
+# - installation files (install)
+# of all the dependencies:
+# - CLHEP
+# - Geant4
+# - ITK
+# - ROOT
+# - GATE itself
+# Preferably this is /software inside the container, and 
+# linked to a directory on the host system.
+export GATE_ROOT_DIR=/software
+
+export PATH=/software/cmake-3.18.4-Linux-x86_64/bin/:$PATH
+
+%runscript
+/bin/bash
+
