@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run the script inside the container to download stuff into the $GATE_ROOT_DIR.
+# Run the script once inside the container to download stuff into the $GATE_ROOT_DIR.
 # Don't clone if directories already exist.
 
 source $GATE_ROOT_DIR/scripts/versions/Gate-9.1.sh
