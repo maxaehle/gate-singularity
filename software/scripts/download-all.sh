@@ -1,6 +1,12 @@
 #!/bin/bash
 # Run the script once inside the container to download stuff into the $GATE_ROOT_DIR.
 # Don't clone if directories already exist.
+# Abort if run outside the container.
+
+if [[ -z "$GATE_ROOT_DIR" ]]; then
+  echo "ERROR: The download must be performed in the container, to set correct paths."
+  exit 1
+fi
 
 source $GATE_ROOT_DIR/scripts/versions.sh
 
