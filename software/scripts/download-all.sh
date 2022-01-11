@@ -1,6 +1,12 @@
 #!/bin/bash
 # Run the script once inside the container to download stuff into the $GATE_ROOT_DIR.
 # Don't clone if directories already exist.
+# Abort if run outside the container.
+
+if [[ -z "$GATE_ROOT_DIR" ]]; then
+  echo "ERROR: The download must be performed in the container, to set correct paths."
+  exit 1
+fi
 
 source $GATE_ROOT_DIR/scripts/versions.sh
 
@@ -18,7 +24,7 @@ else
   rm cmake-3.18.4-Linux-x86_64.tar.gz
 fi
 # CLHEP
-if [[ -e clhep ]]
+if [[ -e clhep/src ]]
 then 
   echo "clhep directory already exists, skipping download."
 else
@@ -30,7 +36,7 @@ else
   rm $CLHEP_File
 fi
 # Geant4
-if [[ -e geant4 ]]
+if [[ -e geant4/src ]]
 then 
   echo "geant4 directory already exists, skipping download."
 else
@@ -38,7 +44,7 @@ else
   git clone --branch $Geant4_Version https://github.com/Geant4/geant4.git geant4/src
 fi
 # ITK
-if [[ -e ITK ]]
+if [[ -e ITK/src ]]
 then 
   echo "ITK directory already exists, skipping download."
 else
@@ -46,7 +52,7 @@ else
   git clone https://github.com/InsightSoftwareConsortium/ITK.git ITK/src
 fi
 # ROOT
-if [[ -e root-cern ]]
+if [[ -e root-cern/src ]]
 then 
   echo "root-cern directory already exists, skipping download."
 else
@@ -54,7 +60,7 @@ else
   git clone --branch $ROOT_Version https://github.com/root-project/root.git root-cern/src
 fi
 # GATE
-if [[ -e gate ]]
+if [[ -e gate/src ]]
 then 
   echo "gate directory already exists, skipping download."
 else
