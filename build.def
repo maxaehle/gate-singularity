@@ -18,7 +18,8 @@ yum install -y \
   mesa-libGLU-devel.x86_64 \
   python3-devel \
   which nano \
-  tar
+  tar \
+  gdb vim valgrind zip # optional, for easier debugging
 mkdir /software
 
 
