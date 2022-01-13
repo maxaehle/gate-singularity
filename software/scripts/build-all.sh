@@ -1,6 +1,8 @@
 #!/bin/bash
 # Compile GATE including all dependencies.
 
+set -e
+
 # Each subproject has 
 # - a configure.sh calling CMake
 # - a build.sh (mostly) calling make
