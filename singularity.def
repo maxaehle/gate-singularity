@@ -1,5 +1,5 @@
 Bootstrap: library
-From: centos:8
+From: rockylinux:8
 
 %post
 yum install -y \
