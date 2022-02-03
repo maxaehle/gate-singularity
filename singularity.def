@@ -19,7 +19,9 @@ yum install -y \
   python3-devel \
   which nano \
   tar \
-  gdb vim valgrind zip # optional, for easier debugging
+  gdb vim valgrind zip  \
+  libjpeg-devel python3-tkinter
+pip3 install matplotlib
 mkdir /software
 
 
