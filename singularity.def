@@ -19,7 +19,7 @@ yum install -y \
   python3-devel \
   which nano \
   tar \
-  gdb vim valgrind zip # optional, for easier debugging
+  gdb vim valgrind zip tmux # optional, for easier debugging
 mkdir /software
 
 
