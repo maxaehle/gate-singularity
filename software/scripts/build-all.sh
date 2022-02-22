@@ -19,6 +19,4 @@ $GATE_ROOT_DIR/ITK/configure.sh
 $GATE_ROOT_DIR/ITK/build.sh
 $GATE_ROOT_DIR/root-cern/configure.sh
 $GATE_ROOT_DIR/root-cern/build.sh
-$GATE_ROOT_DIR/gate/configure.sh
-$GATE_ROOT_DIR/gate/build.sh
 
