@@ -20,6 +20,8 @@ yum install -y \
   which nano \
   tar \
   gdb vim valgrind zip # optional, for easier debugging
+pip3 install --upgrade pip
+pip3 install PyQt6 colored scikit-build
 mkdir /software
 
 
