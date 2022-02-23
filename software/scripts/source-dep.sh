@@ -15,4 +15,7 @@ if [[ -f $GATE_ROOT_DIR/geant4/install/lib64/libG4processes.so ]]; then
   export LD_PRELOAD=$GATE_ROOT_DIR/geant4/install/lib64/libG4processes.so:$LD_PRELOAD
 fi
 export PYTHONPATH=$PYTHONPATH:/software/gam-g4/
+# alias python=python3
+ln -f -s /usr/bin/python3 /software/python
+PATH=$PATH:/software
 
