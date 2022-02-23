@@ -19,7 +19,7 @@ yum install -y \
   python3-devel \
   which nano \
   tar \
-  gdb vim valgrind zip # optional, for easier debugging
+  gdb vim valgrind zip tmux git-lfs # optional, for easier debugging
 pip3 install --upgrade pip
 pip3 install PyQt6 colored scikit-build
 mkdir /software
