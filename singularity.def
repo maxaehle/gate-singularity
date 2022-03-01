@@ -2,7 +2,7 @@ Bootstrap: library
 From: rockylinux:8
 
 %post
-yum install -y \
+yum install --enablerepo=baseos-debug -y \
   make \
   libX11-devel.x86_64 \
   libXpm-devel.x86_64 \
@@ -19,7 +19,7 @@ yum install -y \
   python3-devel \
   which nano \
   tar \
-  gdb vim valgrind zip tmux git-lfs # optional, for easier debugging
+  gdb vim valgrind zip tmux git-lfs python3-debuginfo
 pip3 install --upgrade pip
 pip3 install PyQt6 colored scikit-build
 mkdir /software
