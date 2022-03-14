@@ -1,5 +1,7 @@
 export Gate_Version=v9.1
 
+export ITK_Version=master
+
 case "$Gate_Version" in
 
 v8.1)
@@ -28,6 +30,13 @@ v9.1)
   export ROOT_Version=v6-19-02
   export CLHEP_Version=2.4.4.1
   export Geant4_Version=v10.7.1
+  ;;
+
+develop)
+  export ROOT_Version=v6-24-06
+  export CLHEP_Version=2.4.5.1
+  export Geant4_Version=v11.0.0
+  export ITK_Version=v5.2.0
   ;;
 
 *) 

@@ -49,7 +49,7 @@ then
   echo "ITK directory already exists, skipping download."
 else
   mkdir -p ITK/src ITK/bin
-  git clone https://github.com/InsightSoftwareConsortium/ITK.git ITK/src
+  git clone --branch $ITK_Version https://github.com/InsightSoftwareConsortium/ITK.git ITK/src
 fi
 # ROOT
 if [[ -e root-cern/src ]]
