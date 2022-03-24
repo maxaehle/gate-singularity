@@ -1,4 +1,4 @@
-export Gate_Version=v9.1
+export Gate_Version=v9.2
 
 export ITK_Version=master
 
@@ -32,11 +32,11 @@ v9.1)
   export Geant4_Version=v10.7.1
   ;;
 
-develop)
+v9.2)
   export ROOT_Version=v6-24-06
   export CLHEP_Version=2.4.5.1
   export Geant4_Version=v11.0.0
-  export ITK_Version=v5.2.0
+  #export ITK_Version=v5.2.0
   ;;
 
 *) 
