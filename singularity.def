@@ -19,7 +19,7 @@ yum install --enablerepo=baseos-debug -y \
   python3-devel \
   which nano \
   tar \
-  gdb vim valgrind zip tmux git-lfs python3-debuginfo
+  gdb vim valgrind zip tmux git-lfs python3-debuginfo patch openssl-devel fftw3-devel 
 pip3 install --upgrade pip
 pip3 install PyQt6 colored scikit-build
 mkdir /software
