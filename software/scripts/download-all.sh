@@ -67,6 +67,14 @@ else
   mkdir -p gate/src gate/bin
   git clone --branch $Gate_Version https://github.com/OpenGATE/Gate.git gate/src
 fi
+# GAM
+if [[ -e gam/src ]]
+then 
+  echo "gam directory already exists, skipping download."
+else
+  mkdir -p gam/src 
+  git clone --recurse-submodules https://github.com/OpenGATE/gam-gate gam/src
+fi
 
 
 
