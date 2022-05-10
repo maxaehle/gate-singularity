@@ -43,32 +43,3 @@ else
   mkdir -p geant4/src geant4/bin geant4/install geant4/data
   git clone --branch $Geant4_Version https://github.com/Geant4/geant4.git geant4/src
 fi
-# ITK
-if [[ -e ITK/src ]]
-then 
-  echo "ITK directory already exists, skipping download."
-else
-  mkdir -p ITK/src ITK/bin
-  git clone --branch $ITK_Version https://github.com/InsightSoftwareConsortium/ITK.git ITK/src
-fi
-# ROOT
-if [[ -e root-cern/src ]]
-then 
-  echo "root-cern directory already exists, skipping download."
-else
-  mkdir -p root-cern/src root-cern/bin root-cern/install
-  git clone --branch $ROOT_Version https://github.com/root-project/root.git root-cern/src
-fi
-# GATE
-if [[ -e gate/src ]]
-then 
-  echo "gate directory already exists, skipping download."
-else
-  mkdir -p gate/src gate/bin
-  git clone --branch $Gate_Version https://github.com/OpenGATE/Gate.git gate/src
-fi
-
-
-
-
-
