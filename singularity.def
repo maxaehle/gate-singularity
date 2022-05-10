@@ -25,6 +25,9 @@ mkdir /software
 
 %environment
 export USE_RTK=ON
+export CFLAGS="-fno-omit-frame-pointer -g -fsanitize=thread"
+export CXXFLAGS="-fno-omit-frame-pointer -g -fsanitize=thread"
+export LDFLAGS="-fsanitize=thread"
 
 # GATE_ROOT_DIR contains all the 
 # - sources (src), 
