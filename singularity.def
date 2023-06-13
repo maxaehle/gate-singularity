@@ -1,36 +1,37 @@
-Bootstrap: library
-From: rockylinux:8
+Bootstrap: docker
+From: debian:11.5
 
 %post
-yum install -y \
+apt-get update && apt-get upgrade -y
+apt-get install -y \
   make \
-  libX11-devel.x86_64 \
-  libXpm-devel.x86_64 \
-  libXft-devel.x86_64 \
-  libXext-devel.x86_64 \
-  libXmu-devel.x86_64 \
-  libxml2-devel.x86_64 \
+  libx11-dev \
+  libxpm-dev \
+  libxft-dev \
+  libxext-dev \
+  libxmu-dev \
+  libxml2-dev \
   binutils \
-  qt5-qtbase-devel.x86_64 \
   git \
   cmake \
   wget \
-  mesa-libGLU-devel.x86_64 \
-  python3-devel \
-  which nano \
+  libglu1-mesa-dev \
+  python3-dev \
+  debianutils nano \
   tar \
-  gdb vim valgrind zip tmux git-lfs patch openssl-devel fftw3-devel \
-  automake gcc-gfortran libstdc++-devel
+  gdb vim valgrind zip tmux git-lfs patch libssl-dev libfftw3-dev 
+apt-get install -y \
+  build-essential binutils gfortran automake gcc-multilib g++-multilib python3 python3-dev \
+  gdb libc6-dbg
 
 mkdir /software
-
 
 %environment
 export USE_RTK=ON
 
-# GATE_ROOT_DIR contains all the 
-# - sources (src), 
-# - compilation artifacts (bin) and 
+# GATE_ROOT_DIR contains all the
+# - sources (src),
+# - compilation artifacts (bin) and
 # - installation files (install)
 # of all the dependencies:
 # - CLHEP
@@ -38,7 +39,7 @@ export USE_RTK=ON
 # - ITK
 # - ROOT
 # - GATE itself
-# Preferably this is /software inside the container, and 
+# Preferably this is /software inside the container, and
 # linked to a directory on the host system.
 export GATE_ROOT_DIR=/software
 
