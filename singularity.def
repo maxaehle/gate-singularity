@@ -12,6 +12,7 @@ apt-get install -y \
   libxmu-dev \
   libxml2-dev \
   binutils \
+  qtbase5-dev \
   git \
   cmake \
   wget \
