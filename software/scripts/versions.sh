@@ -39,6 +39,12 @@ v9.2)
   #export ITK_Version=v5.2.0
   ;;
 
+v9.3)
+  export ROOT_Version=v6-31-01
+  export CLHEP_Version=2.4.6.2
+  export Geant4_Version=v11.1.3
+  ;;
+
 *) 
   echo "Incorrect Gate_Version."
   ;;
